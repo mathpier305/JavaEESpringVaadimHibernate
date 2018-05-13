@@ -9,12 +9,12 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="VEHICLE_TABLE")
-@Inheritance(strategy=InheritanceType.JOINED)
+@Table
+@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
 public class Vehicle {
-	
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.TABLE)
 	private int id;
 
 	protected String name;

@@ -8,16 +8,16 @@ public class App {
 	public static void main(String[] args) {
 
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("personal.jpa");
-		
+
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		entityManager.getTransaction().begin();
 		
-		Bus bus = new Bus("bus name", 200);
-		Car car = new Car("car name", 120);
+		Bus bus = new Bus("name of bus", 200);
+		Car car = new Car("name of Car", 250);
 		
 		entityManager.persist(car);
 		entityManager.persist(bus);
-		
+
 		entityManager.getTransaction().commit();
 
 		entityManager.close();
