@@ -1,10 +1,10 @@
 package com.udemy.inheritance;
 
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
-@DiscriminatorValue(value = "B")
+@PrimaryKeyJoinColumn(name="id")
 public class Bus extends Vehicle {
 
 	private int numberOfPassenger;

@@ -1,10 +1,10 @@
 package com.udemy.inheritance;
 
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
-@DiscriminatorValue(value = "C")
+@PrimaryKeyJoinColumn(referencedColumnName="id")
 public class Car extends Vehicle {
 
 	private int speed;

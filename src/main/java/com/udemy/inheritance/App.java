@@ -12,8 +12,8 @@ public class App {
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		entityManager.getTransaction().begin();
 		
-		Car car = new Car("car  name", 100);
 		Bus bus = new Bus("bus name", 200);
+		Car car = new Car("car name", 120);
 		
 		entityManager.persist(car);
 		entityManager.persist(bus);
